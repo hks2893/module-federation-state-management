@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-import Header from 'nav/Header';
+import Header from 'nav/HeaderB';
 
 import './index.scss';
 
@@ -10,6 +10,7 @@ const App = () => {
 	return (
 		<div className='text-3xl mx-auto max-w-6xl'>
 			<Header count={count} onClear={() => setCount(0)} />
+
 			<div>Name: host</div>
 			<div>Count: {count}</div>
 			<div>

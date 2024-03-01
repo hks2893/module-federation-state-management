@@ -1,9 +1,18 @@
 import React from 'react';
+import { Box } from '@mui/material';
 
+import create, { GetState, SetState } from 'zustand';
+const useStore = create();
 export default ({ count, onClear }) => (
 	<header className='bg-blue-700 text-white font-bold text-3xl p-5 flex'>
-		<div class='flex-grow'>Awesome Header B</div>
-		<div>
+		<div className='flex-grow'>Awesome Header B</div>
+		<Box
+			sx={{
+				display: 'flex',
+				width: '100%',
+				justifyContent: 'space-evenly',
+			}}
+		>
 			{count}
 
 			<button
@@ -12,6 +21,6 @@ export default ({ count, onClear }) => (
 			>
 				Clear Cart
 			</button>
-		</div>
+		</Box>
 	</header>
 );
